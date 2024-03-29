@@ -16,18 +16,18 @@
   
     <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Code</th>
+          <th scope="col">Commune</th>
+          <th scope="col">Municipality</th>
+          <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th scope="row">{{$comuna ->comu_codi}}</th>
+          <td>{{$comuna ->comu_nomb}}</td>
+          <td>{{$comuna ->muni_nomb}}</td>
+          <td><spam>Actions</spam></td>
         </tr>
         <tr>
         </tbody>

@@ -37,7 +37,12 @@ class ComunaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comuna = new comuna();
+        //$comuna->$comu_codi = $request->id;
+        //El codigo de comuna es auto incremental 
+        $comuna->comu_nomb = $request->name;
+        $comuna->muni_codi = $request->code;
+
     }
 
     /**

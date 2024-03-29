@@ -18,7 +18,7 @@
         @csrf
         <div class="mb-3">
           <label for="id" class="form-control">Code</label>
-          <input type="Text" class="form-control" id="id" aria-describedby="idhelp" name="id">
+             <input type="Text" class="form-control" id="id" aria-describedby="idhelp" name="id">
           <div id="emailHelp" class="form-text">Comune Code</div>
         </div>
         <div class="mb-3">
@@ -31,6 +31,7 @@
          @foreach ($municipios as $municipio)   
                   <option value="{{$municipio->muni_codi}}">{{$municipio->muni_nomb}}</option>
          @endforeach
+        </select>
          <div class="mt-3">
             <button type="submit" class="btn btn-primary">Save</button>
             <a href="{{route ('comunas.index')}}" class="btn btn-warning">Cancel</a>

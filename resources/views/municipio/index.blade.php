@@ -31,8 +31,9 @@
           <td>{{$municipio ->muni_nomb}}</td>
           <td>{{$municipio ->depa_nomb}}</td>
           <td>
-
-            </form>
+            <a href="{{route('municipios.edit',['municipio'=>$municipio->muni_codi])}}"
+              class="btn btn-info">Edit</a>
+              <form action=""></form>
           </td>
         </tr>
         

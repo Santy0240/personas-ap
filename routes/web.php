@@ -3,6 +3,7 @@
 use App\Http\Controllers\ComunaController;
 use App\Http\Controllers\departamentocontroler;
 use App\Http\Controllers\MunicipioController;
+use App\Http\Controllers\paiscontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,3 +43,12 @@ Route ::get('/departamentos/create',[departamentocontroler::class,'create'])->na
 Route ::put('/departamentos/{departamento}',[departamentocontroler::class,'update'])->name('departamentos.update');
 Route ::get('/departamentos/{departamento}/edit',[departamentocontroler::class,'edit'])->name('departamentos.edit');
 Route ::delete('/departamentos/{departamento}',[departamentocontroler::class,'destroy'])->name('departamentos.destroy');
+
+//rutas pais
+Route ::get('/paises',[paiscontroller::class,'index'])->name('paises.index');
+Route ::post('/paises',[paiscontroller::class,'store'])->name('paises.store');
+Route ::get('/paises/create',[paiscontroller::class,'create'])->name('paises.create');
+Route ::put('/paises/{pais}',[paiscontroller::class,'update'])->name('paises.update');
+Route ::get('/paises/{pais}/edit',[paiscontroller::class,'edit'])->name('paises.edit');
+Route ::delete('/paises/{pais}',[paiscontroller::class,'destroy'])->name('paises.destroy');
+

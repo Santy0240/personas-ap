@@ -13,7 +13,7 @@
   <body>
     <div class = "container">
     <h1>Listado de departamentos </h1>
- 
+    <a href="{{route ('departamentos.create')}}" class="btn btn-success">Add</a>
     <table class="table">
     <thead>
         <tr>
@@ -31,7 +31,13 @@
           <td>{{$departamento ->depa_nomb}}</td>
           <td>{{$departamento ->pais_nomb}}</td>
           <td>
-            
+            <a href="{{route('departamentos.edit',['departamento'=>$departamento->depa_codi])}}"
+              class="btn btn-info">Edit</a>
+            <form action="{{ route('departamentos.destroy',['departamento'=>$departamento->depa_codi]) }}"
+                 method ='POST' style='display: inline-block'>
+                 @method('delete')
+                 @csrf
+                 <input class= "btn btn-danger" type ="submit" value ="delete">
           </td>
         </tr>
         

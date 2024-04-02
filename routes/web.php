@@ -37,3 +37,8 @@ Route ::delete('/municipios/{municipio}',[MunicipioController::class,'destroy'])
 
 //rutas departamento 
 Route ::get('/departamentos',[departamentocontroler::class,'index'])->name('departamentos.index');
+Route ::post('/departamentos',[departamentocontroler::class,'store'])->name('departamentos.store');
+Route ::get('/departamentos/create',[departamentocontroler::class,'create'])->name('departamentos.create');
+Route ::put('/departamentos/{departamento}',[departamentocontroler::class,'update'])->name('departamentos.update');
+Route ::get('/departamentos/{departamento}/edit',[departamentocontroler::class,'edit'])->name('departamentos.edit');
+Route ::delete('/departamentos/{departamento}',[departamentocontroler::class,'destroy'])->name('departamentos.destroy');
